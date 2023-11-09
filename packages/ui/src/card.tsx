@@ -1,18 +1,20 @@
 import * as React from "react";
 
 export function Card({
+  className,
   title,
   children,
   href,
 }: {
+  className?: string;
   title: string;
   children: React.ReactNode;
   href: string;
 }): JSX.Element {
   return (
     <a
-      className="ui-group ui-rounded-lg ui-border ui-border-transparent ui-px-5 ui-py-4 ui-transition-colors hover:ui-border-neutral-700 hover:ui-bg-neutral-800/30"
-      href={`${href}`}
+      className={`${className} ui-group ui-rounded-lg ui-border ui-border-transparent ui-px-5 ui-py-4 ui-transition-colors hover:ui-border-neutral-700 hover:ui-bg-neutral-800/30`}
+      href={href}
       rel="noopener noreferrer"
       target="_blank"
     >
