@@ -1,0 +1,59 @@
+/*
+.main {}
+
+.vercelLogo {}
+
+.description {}
+
+.code {}
+
+.hero {}
+
+.heroContent {}
+
+.logos {}
+
+.grid {}
+
+.card {}
+
+.circles {}
+
+.logo {}
+
+.logoGradientContainer {}
+
+.turborepoWordmarkContainer {}
+
+.turborepoWordmark {}
+
+.code {}
+
+.gradient {}
+
+.gradientSmall {}
+
+.gradientLarge {}
+
+.glowConic {}
+
+.logoGradient {}
+
+.backgroundGradient {}
+*/
+
+.hero {
+  pointer-events: none;
+}
+
+/* Enable hover only on non-touch devices */
+@media (hover: hover) and (pointer: fine) {
+  .card:hover {
+    background: rgba(var(--card-rgb), 0.3);
+    border: 2px solid rgba(var(--card-border-rgb), 0.15);
+  }
+
+  .card:hover span {
+    transform: translateX(8px);
+  }
+}
