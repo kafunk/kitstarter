@@ -2,20 +2,23 @@
 
 My personal starter repo, created through an integration of the [Turborepo + Next.js (with-tailwind) template](https://github.com/vercel/turbo/tree/main/examples/with-tailwind) and Steven Tey's [Precedent starter](https://github.com/steven-tey/precedent).
 
-This starter assumes use of:
-
-- [pnpm](https://pnpm.io/) as a package manager
-- [Turborepo](https://turbo.build/repo) as a build system
-- [Next.js](https://nextjs.org/) as a React framework
-- [Vercel](https://vercel.com/) for automated deployment & hosting
-
 
 ## Contents & Tech Stack
 
+This starter assumes use of:
+
+- [Next.js](https://nextjs.org/) as a React framework
+- [pnpm](https://pnpm.io/) as a package manager
+- [Turborepo](https://turbo.build/repo) as a build system
+- [Vercel](https://vercel.com/) for automated deployment & hosting
+
 ### Monorepo apps
 
-- `web`: a [Next.js](https://nextjs.org/) app with [Tailwind CSS](https://tailwindcss.com/)
-- `docs`: another [Next.js](https://nextjs.org/) app (currently identical to the above)
+- `basic`: a [Next.js](https://nextjs.org/) app that uses CSS modules (deploys on port 3000, uses ui-basic (with tsup))
+- `tailwind`: a [Next.js](https://nextjs.org/) app that uses [Tailwind CSS](https://tailwindcss.com/) (deploys on port 3001, uses ui-tailwind)
+- `combo-css-1`: example app that uses a combination of CSS modules and Tailwind (deploys on port 3002, uses integrated ui)
+- (coming soon): `combo-css-2`: example app that uses CSS modules, but whose stylesheets import Tailwind classes when possible (deploys on port 3003, uses ui-combo)
+- (coming soon): `cva`: example app that uses [CVA](https://cva.style/)? (deploys on port 3004, uses ui-cva)
 
 ### Local packages (for now, sourced from Turborepo)
 
@@ -60,13 +63,12 @@ This starter assumes use of:
   - [`use-debounce`](https://www.npmjs.com/package/use-debounce) – Debounce a function call / state update
 
 
-
 ## Other templates and resources to keep in mind
+
 - [WebGL gradient](https://whatamesh.vercel.app/)
 - [On-demand ISR](https://vercel.com/templates/next.js/on-demand-incremental-static-regeneration)
 - [Vercel Analytics](https://vercel.com/analytics)
 - select features & config from the [Next.js Enterprise Boilerplate template](https://vercel.com/templates/next.js/nextjs-enterprise-boilerplate)
-
 
 
 ## A note on building `packages/ui` (adapted from the Turborepo [with-tailwind starter](https://github.com/vercel/turbo/blob/main/examples/with-tailwind/README.md)) README
